@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Информационный портал — Учебный курс</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="dataset/assets/logo.svg" alt="Логотип курса" class="logo" width="40" height="40">
+                <span class="brand-name">Информационный портал</span>
+            </div>
+            <nav aria-label="Основная навигация">
+                <ul class="nav-list">
+                    <li><a href="#about">О курсе</a></li>
+                    <li><a href="#tracks">Направления</a></li>
+                    <li><a href="#schedule">Расписание</a></li>
+                    <li><a href="#signup">Регистрация</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- Раздел "О курсе" -->
+        <section id="about" class="section">
+            <h2>О курсе</h2>
+            <p>Добро пожаловать на информационный портал учебного курса. Здесь вы найдёте описание направлений, расписание занятий и сможете записаться на обучение.</p>
+        </section>
+
+        <!-- Раздел "Направления" с карточками из content.csv -->
+        <section id="tracks" class="section">
+            <h2>Направления</h2>
+            <div class="cards">
+                <!-- Карточка 1 -->
+                <article class="card">
+                    <h3>HTML</h3>
+                    <p class="card-category">Основа</p>
+                    <p class="card-description">Структура и семантика документа</p>
+                    <p class="card-value">Значение: 8</p>
+                </article>
+                <!-- Карточка 2 -->
+                <article class="card">
+                    <h3>CSS</h3>
+                    <p class="card-category">Оформление</p>
+                    <p class="card-description">Стили и адаптивность</p>
+                    <p class="card-value">Значение: 9</p>
+                </article>
+                <!-- Карточка 3 -->
+                <article class="card">
+                    <h3>Git</h3>
+                    <p class="card-category">Инструменты</p>
+                    <p class="card-description">История изменений</p>
+                    <p class="card-value">Значение: 7</p>
+                </article>
+                <!-- Карточка 4 -->
+                <article class="card">
+                    <h3>Forms</h3>
+                    <p class="card-category">HTML</p>
+                    <p class="card-description">Пользовательский ввод</p>
+                    <p class="card-value">Значение: 6</p>
+                </article>
+                <!-- Карточка 5 -->
+                <article class="card">
+                    <h3>Accessibility</h3>
+                    <p class="card-category">Качество</p>
+                    <p class="card-description">Доступность интерфейса</p>
+                    <p class="card-value">Значение: 10</p>
+                </article>
+                <!-- Карточка 6 -->
+                <article class="card">
+                    <h3>DevTools</h3>
+                    <p class="card-category">Проверка</p>
+                    <p class="card-description">Исследование DOM и стилей</p>
+                    <p class="card-value">Значение: 8</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Раздел "Расписание" с таблицей -->
+        <section id="schedule" class="section">
+            <h2>Расписание</h2>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Название</th>
+                        <th>Категория</th>
+                        <th>Описание</th>
+                        <th>Значение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>HTML</td><td>Основа</td><td>Структура и семантика документа</td><td>8</td></tr>
+                    <tr><td>2</td><td>CSS</td><td>Оформление</td><td>Стили и адаптивность</td><td>9</td></tr>
+                    <tr><td>3</td><td>Git</td><td>Инструменты</td><td>История изменений</td><td>7</td></tr>
+                    <tr><td>4</td><td>Forms</td><td>HTML</td><td>Пользовательский ввод</td><td>6</td></tr>
+                    <tr><td>5</td><td>Accessibility</td><td>Качество</td><td>Доступность интерфейса</td><td>10</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Раздел "Регистрация" с формой -->
+        <section id="signup" class="section">
+            <h2>Регистрация</h2>
+            <form class="signup-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Имя</label>
+                    <input type="text" id="name" name="name" required minlength="2" maxlength="50" placeholder="Введите ваше имя">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="direction">Направление</label>
+                    <select id="direction" name="direction" required>
+                        <option value="">Выберите направление</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="git">Git</option>
+                        <option value="forms">Forms</option>
+                        <option value="accessibility">Accessibility</option>
+                        <option value="devtools">DevTools</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="age">Возраст</label>
+                    <input type="number" id="age" name="age" min="16" max="100" required placeholder="16">
+                </div>
+                <div class="form-group">
+                    <label for="comment">Комментарий</label>
+                    <textarea id="comment" name="comment" rows="4" maxlength="300" placeholder="Ваш комментарий (необязательно)"></textarea>
+                </div>
+                <button type="submit" class="btn">Записаться</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Информационный портал. Учебный проект.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
